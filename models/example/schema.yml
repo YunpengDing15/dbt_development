@@ -1,0 +1,23 @@
+
+version: 2
+
+sources :
+  - name: ticket_sales
+    database: PROD
+    schema: RAW
+
+    tables:
+      - name: annual_ticket_sales
+
+models:
+    - name: annual_ticket_sales
+      description: "Data for movie ticket sales each year"
+      columns:
+          - name: year
+            description: "Which year does the sales amount stands for"
+            tests:
+                - unique
+                - not_null
+
+    - name: total_sales
+      description: "Total sales from 1995 to 2021"
