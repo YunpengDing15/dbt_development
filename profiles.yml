@@ -1,14 +1,11 @@
-config:
-  send_anonymous_usage_stats: False
-
 default:
   outputs:
-    dev: # User-Password config
+    dev:
       type: snowflake
-      account: us99336.ap-southeast-2
-      user: Jarvis
-      password: JarvisLoveTech2022
-      role: ACCOUNTADMIN
+      account: [your account]
+      user: [your user]
+      password: [your password]
+      role: TRANSFORMER
       database: PROD
       warehouse: TRANSFORMING
       schema: ANALYTICS
